@@ -1,0 +1,22 @@
+uolesporte: --format pretty -p uolesporte_env -p chrome -p html -t @uol_esporte
+gauchazh: --format pretty -p gauchazh_env -p chrome -p html -t @gauchazh
+magazine: --format pretty -p magazine_env -p chrome -p html -t @magazine_luiza
+saucedemo: --format pretty -p saucedemo_env -p chrome -p html -t @saucedemo
+testpage: --format pretty -p testpage_env -p chrome -p html -t @testpage
+
+
+# Reporters
+html: --format html --out=reports/report.html
+
+# Environments
+uolesporte_env: ENVIRONMENT="uolesporte"
+gauchazh_env: ENVIRONMENT="gauchazh"
+magazine_env: ENVIRONMENT="magazine"
+saucedemo_env: ENVIRONMENT="saucedemo"
+testpage_env: ENVIRONMENT="testpage"
+
+# Browsers
+chrome: BROWSER="chrome"
+
+# Visual Mode
+headless: HEADLESS='true'
